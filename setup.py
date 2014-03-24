@@ -24,10 +24,10 @@ minor_version = int(minor_version)
 requires = []
 for dep in info.get('depends', []):
     if not re.match(r'(ir|res|webdav)(\W|$)', dep):
-        requires.append('trytond_%s >= %s.%s, < %s.%s' %
+        requires.append('tryton_%s >= %s.%s, < %s.%s' %
             (dep, major_version, minor_version, major_version,
                 minor_version + 1))
-requires.append('trytond >= %s.%s, < %s.%s' %
+requires.append('trytond >= %s.%s.dev, < %s.%s.dev' %
     (major_version, minor_version, major_version, minor_version + 1))
 
 setup(name='trytond_company',
